@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./CSS/ContactMe.css";
+import axios from 'axios';
 class ContactMe extends Component{
 constructor(props) {
     super(props)
@@ -48,6 +49,9 @@ Emailhandler=(event)=>{
 handleSubmit = (event) => {
     alert(`${this.state.Name} ${this.state.Adress}  ${this.state.Country}  ${this.state.Gender}  ${this.state.Phone}  ${this.state.Email}  Registered Successfully !!!!`)
     console.log(this.state);
+    axios.post('https://jsonplaceholder.typicode.com/posts',this.state)
+    .then(response=>{console.log(response)
+    });
     this.setState({
         Name: "",
         Adress: "",
@@ -57,7 +61,7 @@ handleSubmit = (event) => {
         Email:"",
     })
  event.preventDefault()
-    
+   
 }
 
 render(){

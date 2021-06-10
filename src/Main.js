@@ -19,14 +19,14 @@ function Main() {
 
           <ul className="header">
           <li><NavLink to="login">Login</NavLink></li>
-            <li><NavLink to="/">HOME</NavLink></li>
+            <li><NavLink to="/Home">HOME</NavLink></li>
             <li><NavLink to ="/stuff">ABOUT ME </NavLink> </li>
             <li><NavLink to="/contact">CONTACT ME</NavLink></li>
             <li><a href=" /login#/login">Logout</a></li>
           </ul>         
           <div className="content">
             <Route exact path="/login" component={Login}/>
-          <Route exact path="/" component={()=><Home authorized={true}/>}/>
+          <Route exact path="/Home" component={()=><Home authorized={true}/>}/>
           <Route  exact  path="/stuff" component={AboutMe}/> 
           <Route  exact path="/contact" component={ContactMe}/> 
           </div>
