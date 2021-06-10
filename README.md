@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app
+In this project fetch api is used to post the json data to  desired url  while user enter its username and password in Login.js page and similarily data is send (post api)  through FORM   in ContactMe.js file using axios . 
 
 ## Available Scripts
 
